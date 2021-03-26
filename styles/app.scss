@@ -1,0 +1,56 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.content {
+  flex: 1 0 auto;
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.test {
+  height: 40vh;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(116, 116, 116, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(206, 202, 202);
+  outline: 1px solid slategrey;
+  // background-color: #23adad;
+  // outline: 1px solid #23adad;
+}
+
+@import "/components/Header/style/header.scss";
+@import "/components/Footer/style/footer.scss";
+@import "/pages/style/contacts.scss";

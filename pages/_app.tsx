@@ -1,7 +1,10 @@
-import "../styles/globals.scss";
+import { MainLayout } from "../components/mainLayout";
+import "../styles/app.scss";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <MainLayout>
+      <Component {...pageProps} />
+    </MainLayout>
+  );
 }
-
-export default MyApp;

@@ -1,0 +1,17 @@
+.contacts {
+  &__container {
+    &__elem {
+      &__img {
+        position: relative;
+        height: 1.8rem;
+        width: 1.8rem;
+        &____content {
+          &__title {
+            &_desc {
+            }
+          }
+        }
+      }
+    }
+  }
+}
