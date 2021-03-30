@@ -3,7 +3,9 @@ import React from "react";
 import { Header } from "./Header/Header";
 import { Footer } from "./Footer/Footer";
 
-export const MainLayout: React.FC = ({ children }) => {
+export const MainLayout: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   return (
     <div className="wrapper">
       <div className="content">
