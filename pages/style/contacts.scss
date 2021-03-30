@@ -1,15 +1,41 @@
 .contacts {
+  @include flex;
+  border-top: 1px solid $gray;
+  border-bottom: 1px solid $gray;
+  padding: 15vh 0;
+  margin-top: 5vh;
+
   &__container {
+    @include flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: flex-start;
+
     &__elem {
+      @include flex;
+      align-items: flex-start;
+      flex: 0 0 16%;
+
       &__img {
         position: relative;
-        height: 1.8rem;
-        width: 1.8rem;
-        &____content {
-          &__title {
-            &_desc {
-            }
-          }
+        min-height: 4rem;
+        min-width: 4rem;
+        margin: 0 1rem;
+      }
+
+      &__content {
+        &__title {
+          color: $black;
+          font-size: 14px;
+          font-weight: bold;
+          text-transform: uppercase;
+          margin-bottom: 5px;
+        }
+
+        &__desc {
+          color: $gray-text;
+          font-family: "Merriweather", serif;
+          font-size: 14px;
         }
       }
     }

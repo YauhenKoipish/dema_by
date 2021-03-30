@@ -20,7 +20,7 @@
       margin: 0 2vw;
 
       &__container {
-        color: #888;
+        color: $gray-text;
         list-style: none;
         @include flex;
         font-size: 18px;
@@ -29,11 +29,11 @@
           margin: 0 30px;
 
           &:hover {
-            color: #000;
+            color: $black;
           }
         }
         .active {
-          color: #000;
+          color: $black;
         }
       }
     }
@@ -45,7 +45,7 @@
       padding-left: 6%;
 
       &__elem {
-        color: #444;
+        color: $darkGray-text;
         @include flex;
 
         &__img {
