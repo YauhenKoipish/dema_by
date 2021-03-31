@@ -1,24 +1,49 @@
+import { useState } from "react";
+import { reviewsData } from "../services/data";
+import { getImage } from "../services/getImage";
+
 export default function reviews() {
+  const [currentId, setCurrentId] = useState(0);
+
+  const handleClick = (id: number) => {
+    setCurrentId(id);
+  };
+
   return (
     <div className="reviews">
       <div className="reviews__title">Отзывы наших клиентов</div>
       <div className="reviews__container">
         <ul className="reviews__container__nav">
-          <li className="reviews__container__nav__elem">ProStore</li>
-          <li className="reviews__container__nav__elem">FIMA</li>
-          <li className="reviews__container__nav__elem">Litana</li>
+          {reviewsData.map(({ title, id }) => (
+            <li
+              key={id}
+              className={`reviews__container__nav__elem  ${
+                id === currentId && "active"
+              }`}
+              onClick={() => {
+                handleClick(id);
+              }}>
+              {title}
+            </li>
+          ))}
         </ul>
-        <div className="reviews__container__content">
-          <p className="reviews__container__content__text">
-            ООО «ПрофиСлав-Строй» в 2017 году выполняло работы по строительству
-            светофорного объекта, прокладки кабельной канализации,
-            благоустройству, сети связи ОРУД, устройству организации безопасного
-            движения на объекте: «Реконструкция светофорного объекта с
-            организацией выезда налево на пересечении пр. Партизанский-заезд на
-            гостевую стоянку здания специализированной розничной торговли по пр.
-            Партизанский, 182».
-          </p>
-        </div>
+
+        {reviewsData.map(({ text, img, id }) => (
+          <div
+            key={id}
+            className={`reviews__container__content  ${
+              id === currentId && "activeContent"
+            }`}>
+            <p
+              className={`reviews__container__content__text  
+              }`}>
+              {text}
+            </p>
+            <div className="reviews__container__content__img">
+              {getImage(img)}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
