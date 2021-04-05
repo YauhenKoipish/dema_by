@@ -11,6 +11,8 @@ import marinaImg from "../public/reviews/marina.webp";
 import tamaraImg from "../public/reviews/tamara.webp";
 import vadimImg from "../public/reviews/vadim.webp";
 import vitaliyImg from "../public/reviews/vitaliy.webp";
+import works2Img from "../public/works/works2.webp";
+import worksImg from "../public/works/works.webp";
 
 export const getImage = (imgName: string) => {
   switch (imgName) {
@@ -25,6 +27,26 @@ export const getImage = (imgName: string) => {
           alt={"mail"}
           src={mailImg}
           objectFit={"contain"}
+          layout={"fill"}
+        />
+      );
+
+    case "works":
+      return (
+        <Image
+          alt={"works"}
+          src={worksImg}
+          objectFit={"cover"}
+          layout={"fill"}
+        />
+      );
+
+    case "works2":
+      return (
+        <Image
+          alt={"works2"}
+          src={works2Img}
+          objectFit={"cover"}
           layout={"fill"}
         />
       );

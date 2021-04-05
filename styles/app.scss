@@ -38,6 +38,7 @@ $gray-240: rgb(240, 240, 240);
 $gray-text: #888;
 $darkGray-text: #444;
 $black: #000;
+$green: rgb(91, 170, 0);
 
 .wrapper {
   display: flex;
@@ -60,5 +61,8 @@ $black: #000;
 
 @import "/components/Header/style/header.scss";
 @import "/components/Footer/style/footer.scss";
+@import "/components/Button/style/button.scss";
+@import "/components/WorkExample/style/workExample.scss";
 @import "/pages/style/contacts.scss";
 @import "/pages/style/reviews.scss";
+@import "/pages/style/works.scss";

@@ -47,7 +47,7 @@ export const Header: React.FC = () => {
           <a
             className="header__container__contacts__elem"
             href={"https://www.instagram.com/dsn_by/?igshid=wyqjk6ftvz7r"}>
-            <div className="header__container__contacts__elem__img">
+            <div className="header__container__contacts__elem__img instagram">
               {getImage("instagram")}
             </div>
             {instagram}

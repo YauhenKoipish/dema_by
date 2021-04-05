@@ -1,0 +1,64 @@
+.works {
+  padding-bottom: 40px;
+
+  &__title {
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+    color: $darkGray-text;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: $gray;
+    padding: 10px 0 40px 20px;
+    margin: 1.2rem 0 2rem 0;
+  }
+
+  &__main {
+    @include flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &__navigation {
+      border: 1px solid $gray;
+      border-radius: 4px;
+      border-bottom: none;
+      margin: 0 1rem;
+      color: $gray-text;
+      font-size: 18px;
+      width: 18%;
+      min-width: 260px;
+
+      &__elem {
+        border-bottom: 1px solid $gray;
+        cursor: pointer;
+        padding: 10px;
+        position: relative;
+
+        &__arrow {
+          height: 50%;
+          margin: auto;
+          overflow: hidden;
+          position: absolute;
+          top: 0;
+          left: auto;
+          bottom: 0;
+          right: 20px;
+          transition: 1s;
+        }
+
+        &:hover {
+          color: $darkGray-text;
+
+          .works__main__navigation__elem__arrow {
+            right: 10px;
+          }
+        }
+      }
+    }
+
+    &__content {
+      margin-left: 30px;
+      flex-grow: 1;
+      margin-right: 60px;
+    }
+  }
+}
